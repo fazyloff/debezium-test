@@ -1,5 +1,12 @@
-version: "3.3"
+version: "3.9"
 services:
+    ora:
+        image: oracle/database:19.3.0-ee
+        ports:
+         - 11521:1521
+        environment:            
+            DB_SID: OraDebTest
+            DB_PASSWD: MyPasswd123
     zoo:
         image: debezium/zookeeper
         ports:
